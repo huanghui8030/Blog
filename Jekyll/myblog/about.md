@@ -4,12 +4,9 @@ title: 关于
 permalink: /about/
 ---
 
-关于页面 [jekyllrb.com](http://jekyllrb.com/)
+黄卉
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Web前端开发
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+学信咨询服务有限公司
+
