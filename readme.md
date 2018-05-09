@@ -68,11 +68,10 @@ ES6不是全面兼容，如果兼容，需要通过babel进行转译。
 
     ![效果图](images/0202.png)
 
-- 生成文件` lib/a.js`，代码如下：
+- 生成文件`lib/a.js`，代码如下：
 
     ```js
     "use strict";
-
     var getMessage = function getMessage() {
       return "Hello World";
     };
@@ -80,8 +79,4 @@ ES6不是全面兼容，如果兼容，需要通过babel进行转译。
     ```
 
 - 目录结构以及效果如下：
-
     ![效果图](images/0203.png)
-
-
-

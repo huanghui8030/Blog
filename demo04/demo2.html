@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>处理不同方法的事件委托</title>
+</head>
+<body>
+	<div id="box">
+        <input type="button" id="add" value="添加" />
+        <input type="button" id="remove" value="删除" />
+        <input type="button" id="move" value="移动" />
+        <input type="button" id="select" value="选择" />
+    </div>
+	<script>
+		window.onload = inputClick();
+		
+		function inputClick(){
+			var box = document.getElementById('box');
+			box.onclick = function(ev){
+				var ev = ev || window.event,
+					target = ev.target || ev.srcElement,
+					id = target.id;
+				if(target.nodeName.toLowerCase() ==='input'){
+					switch(id){
+						case 'add':alert(target.value);
+							break;
+						case 'remove':alert(target.value);
+							break;
+						case 'move':alert(target.value);
+							break;
+						case 'select':alert(target.value);
+							break;
+					}
+				}
+			}
+		}
+	</script>
+	
+</body>
+</html>

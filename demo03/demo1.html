@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托</title>
+</head>
+<body>
+	<ul id='ulid'>
+		<li>数学</li>
+		<li>语文</li>
+		<li>英语</li>
+		<li>物理</li>
+		<li>化学</li>
+	</ul>
+	<script>
+		//window.onload = liClick1();
+		window.onload = ulClick();
+
+		//不推荐使用方法
+		function liClick1(){
+			var ul = document.getElementById('ulid');
+			var li = ul.getElementsByTagName('li');
+			for(var i = 0 ; i<li.length;i++){
+				li[i].onclick = function(){
+					alert(this.innerHTML);
+				}
+			}
+		}
+		
+		//事件委托
+		function ulClick(){
+			var ul = document.getElementById('ulid');
+			ul.onclick = function(ev){
+				var ev = ev || window.event;
+				var target = ev.target || ev.srcElement;
+				if(target.nodeName.toLowerCase()==='li'){
+					alert(target.innerHTML);
+				}
+			}
+		}
+	</script>	
+</body>
+</html>
